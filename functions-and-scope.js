@@ -2,7 +2,7 @@
 // maar ook een manier moeten vinden om hetgeen dat je verzamelt ergens te bundelen. Op deze manier zul je ontdekken hoe je omgaat met scope. Pak vooral het hoofdstuk op EdHub over for-loops er nog eens bij!
 // Tip: je mag hier geen ingebouwde object methoden gebruiken, dus daar hoef je niet naar te kijken.
 
-const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+// const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 /* Opdracht  1: Cum Laude */
 
@@ -17,6 +17,25 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // ---- Verwachte uitkomst: 6
 
 
+console.log("----- OPDRACHT 1A")
+
+
+// function getCumLaude(grades) {
+//     const cumLaude = []
+//     const noCumLaude = []
+//     for (let i = 0; i < grades.length; i++) {
+//         if (grades[i] >= 8) {
+//             cumLaude[cumLaude.length] = grades[i]
+//         } else {
+//             noCumLaude[noCumLaude.length] = grades[i]
+//         }
+//     }
+//     return cumLaude.length
+// }
+// console.log(getCumLaude(grades))
+
+
+
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array met eindcijfers willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
@@ -29,6 +48,26 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 
 
+console.log("----- OPDRACHT 1B")
+
+
+// const grades = [6, 4, 5]
+// const grades = [8, 9, 4, 6, 10]
+
+// function getCumLaude(grades) {
+//     const cumLaude = []
+//     const noCumLaude = []
+//     for (let i = 0; i < grades.length; i++) {
+//         if (grades[i] >= 8) {
+//             cumLaude[cumLaude.length] = grades[i]
+//         } else {
+//             noCumLaude[noCumLaude.length] = grades[i]
+//         }
+//     }
+//     return cumLaude.length
+// }
+// console.log(getCumLaude(grades))
+
 
 /* Opdracht  2: Gemiddeld cijfer */
 
@@ -36,11 +75,27 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // De studenten-administratie moet ieder blok opnieuw berekenen wat het gemiddelde eindcijfer is, maar we beginnen met de grades array van hierboven.
 // Schrijf de stapjes om dit te kunnen berekenen eerst uit en vraag jezelf de volgende dingen af:
 // * Hoe wordt een gemiddelde berekend?
+// ------>> alles bij elkaar optellen / aantal getallen
 // * Wat moet ik verzamelen uit de array van cijfers om uiteindelijk een gemiddelde te kunnen berekenen?
+// ------>> indexnummer van de cijfers en het totaal aantal cijfers
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
+
+
+
+console.log("----- OPDRACHT 2A")
+
+
+// let total = 0
+// for (let i = 0; i < grades.length; i++) {
+//     total = total + grades[i]
+// }
+// let averageGrade = total / grades.length
+// console.log(averageGrade)
+
+
 
 
 /* 2b: Omschrijven tot een herbruikbare functie */
@@ -53,12 +108,41 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // averageGrade([6, 4, 5]) geeft xxxx
 // averageGrade([8, 9, 4, 6, 10]) geeft xxxx
 
+console.log("----- OPDRACHT 2B")
+
+// const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+//
+// function getAverageGrade(grades){
+//     let total = 0
+//     for (let i = 0; i < grades.length; i++) {
+//         total = total + grades[i]
+//     }
+//     // let averageGrade = total / grades.length
+//     return total / grades.length
+// }
+//
+// console.log(getAverageGrade(grades)))
+
 
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
 
+console.log("----- OPDRACHT 2C")
+
+// const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+//
+// function getAverageGrade(grades){
+//     let total = 0
+//     for (let i = 0; i < grades.length; i++) {
+//         total = total + grades[i]
+//     }
+//     // let averageGrade = total / grades.length
+//     return total / grades.length
+// }
+//
+// console.log(getAverageGrade(grades).toFixed(2))
 
 
 /* Bonusopdracht: hoogste cijfer */
